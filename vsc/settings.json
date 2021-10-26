@@ -1,0 +1,21 @@
+{
+    "workbench.colorTheme": "Default Dark+",
+    "editor.acceptSuggestionOnEnter": "off",
+    "explorer.confirmDragAndDrop": false,
+    "editor.suggestSelection": "first",
+    "workbench.iconTheme": "vscode-icons",
+    "diffEditor.wordWrap": "on",
+    "editor.wordWrap": "on",
+    "editor.detectIndentation": false,
+    "editor.mouseWheelZoom": true,
+    "window.zoomLevel": 1,
+    "security.workspace.trust.untrustedFiles": "open",
+    "explorer.confirmDelete": false,
+    "liveServer.settings.donotShowInfoMsg": true,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "files.exclude": {
+        "**/node_modules/": true
+    },
+    "security.workspace.trust.banner": "never",
+    "security.workspace.trust.startupPrompt": "never",
+}
