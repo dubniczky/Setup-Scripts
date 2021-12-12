@@ -10,8 +10,12 @@ winget install Docker.DockerDesktop
 winget install OpenVPNTechnologies.OpenVPN
 winget install Microsoft.WindowsTerminal
 winget install MongoDB.Server
+winget insatll MongoDB.Shell
 winget install MongoDB.Compass.Community
-winget install TimKosse.FileZillaClient
+winget install TimKosse.FileZilla.Client
+winget install ApacheFriends.Xampp
+winget install Microsoft.VisualStudioCode
+winget install Python.Python.3
 
 
 # Setup file explorer
