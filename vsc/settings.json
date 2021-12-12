@@ -13,9 +13,13 @@
     "explorer.confirmDelete": false,
     "liveServer.settings.donotShowInfoMsg": true,
     "javascript.updateImportsOnFileMove.enabled": "always",
+    "typescript.updateImportsOnFileMove.enabled": "always",
     "files.exclude": {
         "**/node_modules/": true
     },
     "security.workspace.trust.banner": "never",
     "security.workspace.trust.startupPrompt": "never",
+    "markdown-pdf.displayHeaderFooter": false,
+    "git.confirmSync": false,
+    "editor.unicodeHighlight.nonBasicASCII": false
 }
