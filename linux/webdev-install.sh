@@ -1,8 +1,7 @@
 # web decelopment environment setup
 # Target OS: Ubuntu focal
 
-# OS version
-lsb_release -dc
+
 
 # Update
 sudo apt-get update -y
@@ -12,9 +11,7 @@ sudo apt-get upgrade -y
 cat ./terminal-prompt.sh >> ~/.bashrc
 
 # Install Basic apps
-sudo apt-get install curl -y
-sudo apt-get install unzip -y
-sudo apt-get install python3 -y
+
 
 # Install Node
 sudo apt-get install nodejs -y
