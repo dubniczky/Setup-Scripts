@@ -7,3 +7,4 @@ sudo apt-get -y upgrade
 
 # Install utilities
 sudo apt-get install -y unzip
+sudo apt-get install -y python3
