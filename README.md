@@ -1,3 +1,3 @@
-# Server Development Tools
+# System Setup Scripts
 
-Tools and scripts for developing client-server applications.
+Tools and scripts for setting up environments and installing packages.
