@@ -12,6 +12,7 @@ winget install 14082CryzenTechnologies.RoundedTB_6b5yntewjra3r
 winget install NordVPN.NordVPN
 winget install 9NGHP3DX8HDX # Files - File manager
 winget install Obsidian.Obsidian
+winget install AmineMouafik.Ferdi
 
 # Media & Gaming
 winget install FlawlessWidescreen.FlawlessWidescreen
