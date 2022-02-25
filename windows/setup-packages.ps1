@@ -1,7 +1,7 @@
 # General
 winget install 7zip.7zip
 winget install QL-Win.QuickLook
-winget install Opera.OperaGX
+winget install BraveSoftware.BraveBrowser
 winget install Oracle.JavaRuntimeEnvironment
 winget install Microsoft.PowerToys
 winget install TeamViewer.TeamViewer
