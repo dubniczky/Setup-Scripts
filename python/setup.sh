@@ -11,3 +11,6 @@ pip install matplotlib
 
 # Cryptograpyh
 pip install pycryptodome
+
+# Automatization
+pip install pyautogui
