@@ -8,3 +8,6 @@ pip install seaborn
 pip install pandas
 pip install numpy
 pip install matplotlib
+
+# Cryptograpyh
+pip install pycryptodome
