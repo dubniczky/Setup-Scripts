@@ -9,3 +9,11 @@ Tools and scripts for setting up environments and installing packages.
     - MongoDB
     - NodeJS
     - Terminal Prompt
+- Windows
+    - Disable Telemetry
+    - Setup apps
+    - Setup dev apps
+    - Setup WSL
+    - Packages:
+        - Realtek Driver
+        - Winget installer
