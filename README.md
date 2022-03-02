@@ -17,3 +17,6 @@ Tools and scripts for setting up environments and installing packages.
     - Packages:
         - Realtek Driver
         - Winget installer
+- Visual Studio Code
+    - Extensions
+    - Settings
