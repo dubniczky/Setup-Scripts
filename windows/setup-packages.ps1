@@ -8,9 +8,7 @@ winget install TeamViewer.TeamViewer
 winget install Notion.Notion
 winget install OpenWhisperSystems.Signal
 winget install Discord.Discord
-winget install 14082CryzenTechnologies.RoundedTB_6b5yntewjra3r
 winget install NordVPN.NordVPN
-winget install 9NGHP3DX8HDX # Files - File manager
 winget install Obsidian.Obsidian
 winget install AmineMouafik.Ferdi
 
