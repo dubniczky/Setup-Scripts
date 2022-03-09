@@ -18,7 +18,7 @@ winget install AmineMouafik.Ferdi
 winget install FlawlessWidescreen.FlawlessWidescreen
 winget install clsid2.mpc-hc # Media player classic
 winget install 9WZDNCRFJ3TJ # Netflix
-winget install Deezer.Deezer
+winget install Spotify.Spotify
 winget install Valve.Steam
 winget install VideoLAN.VLC
 
