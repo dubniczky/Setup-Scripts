@@ -13,3 +13,5 @@ alias pyv.load="source .venv/bin/activate"
 alias pyv.save="pip freeze > ./requirements.txt"
 alias pyv.inst="pip install -r ./requirements.txt"
 alias pyv.exit="deactivate"
+
+source venv-script.sh
