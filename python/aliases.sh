@@ -14,4 +14,9 @@ alias pyv.save="pip freeze > ./requirements.txt"
 alias pyv.inst="pip install -r ./requirements.txt"
 alias pyv.exit="deactivate"
 
-source venv-script.sh
+# Install venv terminal extension
+git clone https://gitlab.com/richardnagy/python-venv-terminal-extension
+cd python-venv-terminal-extension
+./install.sh
+cd ..
+rm -r python-venv-terminal-extension
