@@ -11,3 +11,4 @@ sudo apt install -y curl
 sudo apt install -y wget
 sudo apt install -y python3
 sudo apt install -y copyq
+sudo apt install -y gnome-tweak-tool
