@@ -1,6 +1,8 @@
 # Environment
 pip install virtualenv
 pip install doctest
+pip install pytest
+pip install pylint
 
 # Math / Data Science
 pip install sklearn
