@@ -1,27 +1,33 @@
+# Winget install shorthand
+function wgti {
+    param( [Parameter()] [String] $Package )
+    winget install --accept-package-agreements $Package
+}
+
 # General
-winget install 7zip.7zip
-winget install QL-Win.QuickLook
-winget install BraveSoftware.BraveBrowser
-winget install Oracle.JavaRuntimeEnvironment
-winget install Microsoft.PowerToys
-winget install TeamViewer.TeamViewer
-winget install Notion.Notion
-winget install OpenWhisperSystems.Signal
-winget install Discord.Discord
-winget install NordVPN.NordVPN
-winget install Obsidian.Obsidian
-winget install AmineMouafik.Ferdi
+wgti 7zip.7zip
+wgti QL-Win.QuickLook
+wgti BraveSoftware.BraveBrowser
+wgti Oracle.JavaRuntimeEnvironment
+wgti Microsoft.PowerToys
+wgti TeamViewer.TeamViewer
+wgti Notion.Notion
+wgti OpenWhisperSystems.Signal
+wgti Discord.Discord
+wgti NordVPN.NordVPN
+wgti Obsidian.Obsidian
+wgti AmineMouafik.Ferdi
 
 # Media & Gaming
-winget install FlawlessWidescreen.FlawlessWidescreen
-winget install clsid2.mpc-hc # Media player classic
-winget install 9WZDNCRFJ3TJ # Netflix
-winget install Spotify.Spotify
-winget install Valve.Steam
-winget install VideoLAN.VLC
+wgti FlawlessWidescreen.FlawlessWidescreen
+wgti clsid2.mpc-hc # Media player classic
+wgti 9WZDNCRFJ3TJ # Netflix
+wgti Spotify.Spotify
+wgti Valve.Steam
+wgti VideoLAN.VLC
 
 # Special
-winget install DolbyLaboratories.DolbyAccess_rz1tebttyb220
-winget install Logitech.Options
-winget install Corsair.iCUE
-winget install AMD.RyzenMaster
+wgti DolbyLaboratories.DolbyAccess_rz1tebttyb220
+wgti Logitech.Options
+wgti Corsair.iCUE
+wgti AMD.RyzenMaster
