@@ -2,9 +2,10 @@
 lsb_release -dc
 
 # Update pm/os
-sudo apt-get -y update
-sudo apt-get -y upgrade
+sudo apt -y update
+sudo apt -y upgrade
 
 # Install utilities
-sudo apt-get install -y unzip
-sudo apt-get install -y python3
+sudo apt install -y unzip
+sudo apt install -y python3
+sudo apt install -y copyq
