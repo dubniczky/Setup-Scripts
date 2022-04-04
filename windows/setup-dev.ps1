@@ -1,21 +1,27 @@
 # Install web development environment
 
+# Winget install shorthand
+function wgti {
+    param( [Parameter()] [String] $Package )
+    winget install --accept-package-agreements $Package
+}
+# --accept-package-agreements
 
 # Install packages
 Write-Output "Installing packages..."
-winget install Git.Git
-winget install Google.Chrome
-winget install OpenJS.NodeJS
-winget install Docker.DockerDesktop
-winget install OpenVPNTechnologies.OpenVPN
-winget install Microsoft.WindowsTerminal
-winget install MongoDB.Server
-winget insatll MongoDB.Shell
-winget install MongoDB.Compass.Community
-winget install TimKosse.FileZilla.Client
-winget install ApacheFriends.Xampp
-winget install Microsoft.VisualStudioCode
-winget install Python.Python.3
+wgti Git.Git
+wgti Google.Chrome
+wgti OpenJS.NodeJS
+wgti Docker.DockerDesktop
+wgti OpenVPNTechnologies.OpenVPN
+wgti Microsoft.WindowsTerminal
+wgti MongoDB.Server
+wgti MongoDB.Shell
+wgti MongoDB.Compass.Community
+wgti TimKosse.FileZilla.Client
+wgti ApacheFriends.Xampp
+wgti Microsoft.VisualStudioCode
+wgti Python.Python.3
 
 
 # Setup file explorer
