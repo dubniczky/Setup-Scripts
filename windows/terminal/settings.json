@@ -37,42 +37,41 @@
         "list": 
         [
             {
+                "acrylicOpacity": 0.80000000000000004,
                 "commandline": "powershell.exe",
                 "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
                 "hidden": false,
-                "name": "PowerShell"
+                "name": "PowerShell",
+                "useAcrylic": true
             },
             {
                 "commandline": "cmd.exe",
                 "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
                 "hidden": false,
-                "name": "Command Prompt"
+                "name": "CMD"
             },
             {
+                "acrylicOpacity": 0.80000000000000004,
+                "colorScheme": "Campbell",
                 "cursorShape": "filledBox",
                 "guid": "{07b52e3e-de2c-5db4-bd2d-ba144ed6c273}",
                 "hidden": false,
-                "name": "Linux Ubuntu",
+                "icon": "%USERPROFILE%/.termicons/ubuntu.png",
+                "name": "Ubuntu WSL",
                 "source": "Windows.Terminal.Wsl",
-                "tabTitle": "Ubuntu"
+                "tabTitle": "Ubuntu",
+                "useAcrylic": true
             },
             {
-                "acrylicOpacity": 0.070000000000000007,
-                "guid": "{46ca431a-3a87-5fb3-83cd-11ececc031d2}",
-                "hidden": false,
-                "name": "Linux Kali",
-                "source": "Windows.Terminal.Wsl",
-                "useAcrylic": false
-            },
-            {
-                "acrylicOpacity": 0.070000000000000007,
+                "acrylicOpacity": 0.80000000000000004,
                 "colorScheme": "Campbell",
-                "commandline": "wsl.exe -d kali-Linux sudo kex --sl -s",
+                "commandline": "wsl.exe -d kali-Linux",
+                "cursorShape": "filledBox",
                 "guid": "{9319aff2-4e4d-4038-95e9-6db65cbe5897}",
-                "icon": "ms-appx:///ProfileIcons/{9acb9455-ca41-5af7-950f-6bca1bc9722f}.png",
-                "name": "Kali Window",
+                "icon": "%USERPROFILE%/.termicons/kali.png",
+                "name": "Kali WSL",
                 "startingDirectory": "%USERPROFILE%",
-                "useAcrylic": false
+                "useAcrylic": true
             }
         ]
     },
