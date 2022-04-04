@@ -1,0 +1,5 @@
+# Force LFS rules
+**/bin/* binary
+*.zip binary
+*.AppxBundle binary
+*.msixbundle
