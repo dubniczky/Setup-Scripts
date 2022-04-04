@@ -20,8 +20,6 @@ wgti AmineMouafik.Ferdi
 
 # Media & Gaming
 wgti FlawlessWidescreen.FlawlessWidescreen
-wgti clsid2.mpc-hc # Media player classic
-wgti 9WZDNCRFJ3TJ # Netflix
 wgti Spotify.Spotify
 wgti Valve.Steam
 wgti VideoLAN.VLC
