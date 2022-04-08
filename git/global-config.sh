@@ -6,7 +6,7 @@ git config --global core.autocrlf true
 git config --global init.defaultbranch main
 
 # Install LFS
-git lfs Install
+git lfs install
 
 # List config
 git config --list
