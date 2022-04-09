@@ -3,7 +3,7 @@
 # Winget install shorthand
 function wgti {
     param( [Parameter()] [String] $Package )
-    winget install --accept-package-agreements $Package
+    winget install --accept-package-agreements --accept-source-agreements $Package
 }
 # --accept-package-agreements
 
