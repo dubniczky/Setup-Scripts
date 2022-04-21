@@ -23,6 +23,7 @@ wgti ApacheFriends.Xampp
 wgti Microsoft.VisualStudioCode
 wgti Python.Python.3
 wgti Microsoft.VisualStudio.2022.Community
+wgti GnuPG.Gpg4win
 
 
 # Setup file explorer
