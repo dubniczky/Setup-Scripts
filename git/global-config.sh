@@ -5,8 +5,5 @@ git config --global credential.helper store
 git config --global core.autocrlf true
 git config --global init.defaultbranch main
 
-# Install LFS
-git lfs install
-
 # List config
 git config --list
