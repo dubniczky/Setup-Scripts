@@ -12,3 +12,6 @@ git config --global commit.gpgsign true
 
 # List config
 git config --list
+
+# Register gitgraph
+echo -e "alias gitgraph='git log --graph --pretty=oneline --abbrev-commit --all --decorate'" >> ~/.bashrc
