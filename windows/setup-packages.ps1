@@ -16,7 +16,6 @@ wgti OpenWhisperSystems.Signal
 wgti Discord.Discord
 wgti NordVPN.NordVPN
 wgti Obsidian.Obsidian
-wgti AmineMouafik.Ferdi
 wgti Bitwarden.Bitwarden
 wgti Mozilla.Firefox
 wgti 9NBHCS1LX4R0 # Paint.net
