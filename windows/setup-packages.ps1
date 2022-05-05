@@ -21,7 +21,6 @@ wgti Mozilla.Firefox
 wgti 9NBHCS1LX4R0 # Paint.net
 wgti 9MTFTXSJ9M7F # Rounded TB
 wgti Appest.TickTick
-wgti Obsidian.Obsidian
 
 # Media & Gaming
 wgti FlawlessWidescreen.FlawlessWidescreen
