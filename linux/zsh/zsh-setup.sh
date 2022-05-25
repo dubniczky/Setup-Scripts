@@ -14,3 +14,7 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 # Back up and replace .zshrc config
 mv ~/.zshrc ~/.zshrc.bkp
 cp ./.zshrc ~/.zshrc
+chmod u+x ~/.zshrc
+
+# Reload config
+zsh
