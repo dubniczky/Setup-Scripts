@@ -83,13 +83,23 @@ fi
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
+
+# ZSH
 alias zshconfig="nano ~/.zshrc"
 
+# Dir shortcuts
 alias desk="cd ~/Desktop"
 alias windesk="cd /mnt/c/Users/Richard/Desktop"
 
-alias py="python3"
-alias python="python3"
-
+# Dir listing
 alias ls="exa"
 alias ll="exa -la"
+alias tree="exa --tree"
+
+# Python
+alias py="python3"
+alias python="python3"
+alias pym="python manage.py"
+
+# Git
+alias graph="git log --graph --pretty=oneline --abbrev-commit --all --decorate"
