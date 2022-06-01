@@ -58,7 +58,7 @@ HIST_STAMPS="dd.mm.yyyy"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions node python docker golang cloudapp command-not-found npm vscode sudo)
+plugins=(git zsh-autosuggestions node python docker golang command-not-found npm vscode sudo)
 
 source $ZSH/oh-my-zsh.sh
 
