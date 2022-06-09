@@ -362,3 +362,14 @@ Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Policies
 Write-Output "Disabling Remote Assistance..."
 Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\Remote Assistance" -Name "fAllowToGetHelp" -Type DWord -Value 0
 Get-WindowsCapability -Online | Where-Object { $_.Name -like "App.Support.QuickAssist*" } | Remove-WindowsCapability -Online | Out-Null
+
+###
+### Uninstall Windows Defender
+###
+
+Set-MpPreference -DisableRealtimeMonitoring $true
+Uninstall-WindowsFeature -Name Windows-Defender
+Set-ItemProperty -Path "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender" -Name "DisableDefender" -Type DWord -Value 1
+
+
+Write-Output "Script done. Please restart your computer.."
