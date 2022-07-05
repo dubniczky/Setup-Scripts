@@ -1,105 +1,100 @@
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+## Options
+OVERRIDE_EXA="true" # Overrides ls commands with advanced exa
+CUSTOM_PROMPT="true" # Overrides zsh theme with custom prompt
 
-# Path to your oh-my-zsh installation.
+## Set preferences
 export ZSH="$HOME/.oh-my-zsh"
+export EDITOR='nano' # Default terminal editor
+export LANG=en_US.UTF-8
+HIST_STAMPS="mm/dd/yyyy"
+HYPHEN_INSENSITIVE="true" # _ and - is same in path
+ZSH_THEME="robbyrussell" # Theme is not used
 
-# Set name of the theme to load
-ZSH_THEME="robbyrussell"
+## Setup auto update
+zstyle ':omz:update' mode auto
+zstyle ':omz:update' frequency 14 # every 2 weeks
 
-# Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
+## Plugin list
+plugins=(git zsh-autosuggestions)
 
-# Uncomment the following line to use hyphen-insensitive completion.
-# Case-sensitive completion must be off. _ and - will be interchangeable.
-HYPHEN_INSENSITIVE="true"
-
-# Uncomment one of the following lines to change the auto-update behavior
-# zstyle ':omz:update' mode disabled  # disable automatic updates
-zstyle ':omz:update' mode auto      # update automatically without asking
-# zstyle ':omz:update' mode reminder  # just remind me to update when it's time
-
-# Uncomment the following line to change how often to auto-update (in days).
-zstyle ':omz:update' frequency 7
-
-# Uncomment the following line if pasting URLs and other text is messed up.
-# DISABLE_MAGIC_FUNCTIONS="true"
-
-# Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
-
-# Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
-
-# Uncomment the following line to display red dots whilst waiting for completion.
-# You can also set it to another string to have that shown instead of the default red dots.
-# e.g. COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
-# Caution: this setting can cause issues with multiline prompts in zsh < 5.7.1 (see #5765)
-# COMPLETION_WAITING_DOTS="true"
-
-# Uncomment the following line if you want to disable marking untracked files
-# under VCS as dirty. This makes repository status check for large repositories
-# much, much faster.
-DISABLE_UNTRACKED_FILES_DIRTY="true"
-
-# Uncomment the following line if you want to change the command execution time
-# stamp shown in the history command output.
-# You can set one of the optional three formats:
-# "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# or set a custom format using the strftime function format specifications,
-# see 'man strftime' for details.
-HIST_STAMPS="dd.mm.yyyy"
-
-# Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
-
-# Which plugins would you like to load?
-# Standard plugins can be found in $ZSH/plugins/
-# Custom plugins may be added to $ZSH_CUSTOM/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions node python docker golang command-not-found npm vscode sudo)
-
+## Load Oh My ZSH
 source $ZSH/oh-my-zsh.sh
 
-# User configuration
-
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# You may need to manually set your language environment
-export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='nano'
-else
-  export EDITOR='nano'
+## Replace listing using LS with EXA
+if [ $OVERRIDE_EXA ]; then
+    # Use colors, use icons, group dirs, iso-time, show git status
+    alias ls="exa --color=always --icons --group-directories-first --time-style=iso --git"
+    # Shorter hand
+    alias l="ls"
+    # List style with file sizes
+    alias ll="ls -bl"
+    # List hidden files
+    alias la="ll -a"
+    # Show tree, do not include git ignored folders or .git directory
+    alias tree="la --tree --git-ignore --ignore-glob=.git"
 fi
 
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
+## Configuration Shortcuts
+alias zshconf="nano ~/.zshrc"
+alias dnfconf="sudo nano /etc/dnf/dnf.conf"
+alias gpgconf="nano ~/.gnupg/gpg.conf"
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-
-# ZSH
-alias zshconfig="nano ~/.zshrc"
-
-# Dir shortcuts
+## Directory traversal
 alias desk="cd ~/Desktop"
-alias windesk="cd /mnt/c/Users/Richard/Desktop"
+alias windesk="cd /mnt/c/Users/$USER/Desktop" # Used on WSL systems
+alias root="cd /"
 
-# Dir listing
-alias ls="exa"
-alias ll="exa -la"
-alias tree="exa --tree"
+## Command simplification
+alias s="sudo"
+alias sdnf="sudo dnf -y" # Red Hat
+alias sapt="sudo apt -y" # Debian
+alias spacman="sudo pacman --noconfirm" # Arch
+alias sdocker="sudo docker"
 
-# Python
-alias py="python3"
-alias python="python3"
-alias pym="python manage.py"
 
-# Git
-alias graph="git log --graph --pretty=oneline --abbrev-commit --all --decorate"
+##
+## Zsh custom prompt script
+##
+
+if [ $CUSTOM_PROMPT ]; then
+    ## Prompt segments
+    function exitcode_prompt() { echo "%(?.%F{green}.%F{red})%?%f" }
+    function user_prompt() { echo "%F{12}%Bλ%b %n@$(hostname)%f" }
+    function time_prompt() { echo "%F{13}\uf017 %*%f" }
+    function git_prompt() { echo "%F{9}\uf126 $(git_prompt_info)%f" }
+    function directory_prompt() { echo "%F{green}\uf07c  %0~%f" }
+    function newline_prompt() { echo -e "\n" }
+    function elevation_prompt() {
+        if [ "$EUID" -eq 0 ]; then
+            echo "#" # Root
+        else
+            echo "$" # Other user
+        fi
+    }
+
+    ## Timer functions
+    function preexec() {
+        command_timer_start=$(date +%s.%2N)
+    }
+    function precmd() {
+        if [ $command_timer_start ]; then
+            now=$(date +%s.%2N)
+            delta_time=$(echo "scale=2; $now - $command_timer_start" | bc)
+            if [ ${#delta_time} -eq 3 ]; then
+                delta_time="0$delta_time"
+            fi 
+            export RPROMPT="%F{cyan}${delta_time}s%f [$(exitcode_prompt)]"
+            unset command_timer_start
+        fi
+    }
+
+    ## Git format
+    ZSH_THEME_GIT_PROMPT_PREFIX="< "
+    ZSH_THEME_GIT_PROMPT_SUFFIX=" >"
+    ZSH_THEME_GIT_PROMPT_DIRTY=":%F{1}\uf057%F{9}"
+    ZSH_THEME_GIT_PROMPT_CLEAN=":%F{2}\uf058%F{9}"
+
+    ## Prompt
+    PROMPT='[ $(user_prompt) | $(directory_prompt) | $(git_prompt) | $(time_prompt) ]
+$(elevation_prompt) '
+fi
