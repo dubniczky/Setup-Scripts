@@ -1,3 +1,7 @@
+## Author: Richard Antal Nagy
+## Repository: https://gitlab.com/richardnagy/system-setup-scripts
+## Installs docker in debian based systems
+
 # Remove old versions (legacy container)
 sudo apt remove \
     docker \
