@@ -1,5 +1,8 @@
+## Settings
+PACKAGE_INSTALLER="apt install -y"
+
 # Install ZSH
-sudo apt install -y zsh exa
+sudo $PACKAGE_INSTALLER zsh
 zsh --version
 
 # Set as default terminal
@@ -13,7 +16,7 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 
 # Back up and replace .zshrc config
 mv ~/.zshrc ~/.zshrc.bkp
-cp ./.zshrc ~/.zshrc
+cp ./zsh/.zshrc ~/.zshrc
 chmod u+x ~/.zshrc
 
 # Reload config
