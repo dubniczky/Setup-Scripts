@@ -1,5 +1,10 @@
+## Author: Richard Antal Nagy
+## Repository: https://gitlab.com/richardnagy/system-setup-scripts
+## Installs zsh and updates the configuration with aliases, plugins and a custom prompt
+
 ## Settings
 PACKAGE_INSTALLER="apt install -y"
+
 
 # Install ZSH
 sudo $PACKAGE_INSTALLER zsh
