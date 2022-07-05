@@ -1,3 +1,7 @@
+## Author: Richard Antal Nagy
+## Repository: https://gitlab.com/richardnagy/system-setup-scripts
+## Installs MongoDB database and shell on a debian based system
+
 # Update PM
 sudo apt-get update
 
