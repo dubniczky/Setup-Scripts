@@ -1,6 +1,10 @@
 #!/bin/bash
 
-# Uninstall Games
+## Author: Richard Antal Nagy
+## Repository: https://gitlab.com/richardnagy/system-setup-scripts
+## Clean up default installed ubuntu bloatware
+
+## Uninstall Games
 echo "Uninstalling games..."
 sudo apt purge -y aisleriot \
     gnome-sudoku \
@@ -14,15 +18,15 @@ sudo apt purge -y aisleriot \
     gnome-mahjongg \
     gnome-mines
 
-# Remove old kernels
+## Remove old kernels
 echo "Removing old kernels..."
 sudo dpkg -l linux-{image,headers}-* | awk '/^ii/{print $2}' | egrep '[0-9]+\.[0-9]+\.[0-9]+' | grep -v $(uname -r) | xargs sudo apt-get -y purge
 
-# Remove error reporting
+## Remove error reporting
 echo "Removing error reporting..."
 sudo apt remove -y whoopsie apport apport-gtk ubuntu-report
 
-# Uninstall unused dependencies
+## Uninstall unused dependencies
 echo "Removing unused dependencies..."
 sudo apt autoclean autoremove
 
