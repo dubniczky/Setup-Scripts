@@ -6,17 +6,20 @@
     "workbench.iconTheme": "material-icon-theme",
     "diffEditor.wordWrap": "on",
     "editor.wordWrap": "on",
-    "editor.detectIndentation": false,
     "editor.mouseWheelZoom": true,
-    "window.zoomLevel": 1,
     "security.workspace.trust.untrustedFiles": "open",
     "explorer.confirmDelete": false,
     "liveServer.settings.donotShowInfoMsg": true,
     "javascript.updateImportsOnFileMove.enabled": "always",
     "typescript.updateImportsOnFileMove.enabled": "always",
     "files.exclude": {
-        "**/node_modules/": true
+        "**/node_modules/": true,
+        "**/.venv/": true
     },
+    "files.associations": {
+        "*Makefile": "makefile"
+    },
+    "security.workspace.trust.enabled": false,
     "security.workspace.trust.banner": "never",
     "security.workspace.trust.startupPrompt": "never",
     "markdown-pdf.displayHeaderFooter": false,
@@ -25,5 +28,17 @@
     "editor.unicodeHighlight.ambiguousCharacters": false,
     "editor.accessibilitySupport": "off",
     "redhat.telemetry.enabled": false,
-    "workbench.tree.indent": 18
+    "workbench.tree.indent": 18,
+    "npm.enableRunFromFolder": true,
+    "editor.bracketPairColorization.enabled": true,
+    "editor.hover.delay": 200,
+    "editor.linkedEditing": true,
+    "git.enableCommitSigning": true,
+    "go.autocompleteUnimportedPackages": true,
+    "go.enableCodeLens": {
+        "references": true
+    },
+    "go.formatTool": "gofmt",
+    "go.gocodeAutoBuild": true,
+    "git.autofetch": true
 }
