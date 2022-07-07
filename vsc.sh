@@ -1,3 +1,10 @@
+#!/bin/bash
+
+## Author: Richard Antal Nagy
+## Repository: https://gitlab.com/richardnagy/system-setup-scripts
+## Installs vscodium, adds the custom config.json and installs listed packages
+
+
 ## Install GPG key
 wget -qO - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg \
     | gpg --dearmor \
