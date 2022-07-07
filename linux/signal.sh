@@ -1,3 +1,5 @@
+#!/bin/bash
+
 ## Author: Richard Antal Nagy
 ## Repository: https://gitlab.com/richardnagy/system-setup-scripts
 ## Installs signal messenger on debian based systems

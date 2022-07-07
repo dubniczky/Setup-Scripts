@@ -1,3 +1,5 @@
+#!/bin/bash
+
 ## Author: Richard Antal Nagy
 ## Repository: https://gitlab.com/richardnagy/system-setup-scripts
 ## Installs zsh and updates the configuration with aliases, plugins and a custom prompt
