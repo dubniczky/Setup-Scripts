@@ -22,6 +22,7 @@ Some scripts are specific for certain distributions, but usually they work on th
 |[python](/python.sh)||Installs `python` and `bpython` runtime and `pip` package manager alongside with common python packages|
 |[signal](/signal.sh)|Debian|Installs signal messenger|
 |[vsc](/vsc.sh)||Installs vscodium, adds the custom `config.json` and installs listed packages|
+|[winkex](/winkex.sh)|Kali WSL|Installs winkex and sets up shortcuts for easy usage|
 |[zsh](/vsc.sh)||Installs vscodium, adds the custom `config.json` and installs listed packages|
 
 ## Utility Scripts
