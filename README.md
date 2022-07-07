@@ -17,6 +17,7 @@ Some scripts are specific for certain distributions, but usually they work on th
 |[cli-packages](/cli-packages.sh)|Debian|Installs basic cli packages|
 |[docker](/docker.sh)|Debian|Installs docker daemon and runs the hello-world demo|
 |[git](/git.sh)||Installs git, sets up git global settings, activates gpg signing and creates a global gitignore|
+|[kali-upgrade](/kali-upgrade.sh)|Kali, Kali WSL|Upgrades a minimal or headless Kali installation, alongside with extra packages|
 |[mongodb](/mongodb.sh)|Debian|Installs mongodb daemon and and `mongo-cli`, then activates it as a service|
 |[nodejs](/nodejs.sh)|Debian|Installs `nodejs`, `npm`, `yarn` and commonly used global packages|
 |[python](/python.sh)||Installs `python` and `bpython` runtime and `pip` package manager alongside with common python packages|
