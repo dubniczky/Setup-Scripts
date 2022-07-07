@@ -24,7 +24,7 @@ Some scripts are specific for certain distributions, but usually they work on th
 |[signal](/signal.sh)|Debian|Installs signal messenger|
 |[vsc](/vsc.sh)||Installs vscodium, adds the custom `config.json` and installs listed packages|
 |[winkex](/winkex.sh)|Kali WSL|Installs winkex and sets up shortcuts for easy usage|
-|[zsh](/vsc.sh)||Installs vscodium, adds the custom `config.json` and installs listed packages|
+|[zsh](/vsc.sh)||Installs zsh and updates the configuration with aliases, plugins and a custom prompt|
 
 ## Utility Scripts
 
