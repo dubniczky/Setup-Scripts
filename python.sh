@@ -4,8 +4,12 @@
 ## Repository: https://gitlab.com/richardnagy/system-setup-scripts
 ## Install python and general packages
 
+## Settings
+PACKAGE_INSTALLER="apt install -y"
+
+
 ## Install python packages
-sudo apt install -y \
+sudo $PACKAGE_INSTALLER \
     python3 \
     python3-pip \
     bpython
