@@ -30,6 +30,6 @@ Some scripts are specific for certain distributions, but usually they work on th
 
 |Script|Description|
 |---|---|
-|[export-gpg](/export-gpg.sh)|Export specific gpg keys into files for migration|
+|[export-gpg](/export-gpg.sh)|Export a specified gpg key in armored format for migration|
 |[ubuntu-cleanup](/ubuntu-cleanup.sh)|Removes default installed bloat packages and cleans up the system|
 |[pulseaudio-fix](/pulseaudio-fix.sh)|Fix a common audio issue with PulseAudio configuration where only mute or maximum sound is available|
