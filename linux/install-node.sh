@@ -1,18 +1,28 @@
-# Install packages
-sudo apt-get install -y nodejs
-sudo apt-get install npm -y
+## Author: Richard Antal Nagy
+## Repository: https://gitlab.com/richardnagy/system-setup-scripts
+## Installs NodeJS, NVM, package managers, and several general packages
 
-# Check versions
-node -v || nodejs -v
+## Settings
+NVM_VERSION="v0.39.1" # Check for newest before running (https://github.com/nvm-sh/nvm#installing-and-updating)
+
+## Install packages
+sudo apt install -y nodejs npm
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/$NVM_VERSION/install.sh | bash
+
+## Check versions
+node -v
 npm -v
 
-# Install npm packages
-npm i -g nodemon           # Realtime dev
-npm i -g yarn              # Alternate PM
-npm i -g npm-check         # Search old/outdated packages
-npm i -g http-server       # Quick serve directory
-npm i -g tinypng-cli       # Resize png images
-npm i -g sort-package-json # Clean up package.json
+## Install yarn for faster package installation
+npm i -g yarn
 
-# List all global npm packages
+## Install global packages
+npx yarn global add \
+    nodemon \
+    http-server \
+    eslint \
+    uglifyjs \
+    webpack
+
+## List all global packages
 npm ls -g --depth=0
