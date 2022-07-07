@@ -24,5 +24,11 @@ mv ~/.zshrc ~/.zshrc.bkp
 cp ./zsh/.zshrc ~/.zshrc
 chmod u+x ~/.zshrc
 
+# Install SauceCodePro font
+echo "Installing terminal font"
+sudo mkdir -p /usr/share/fonts/saucecodepro
+sudo cp ./zsh/SauceCodePro-NerdFont.ttf /usr/share/fonts/saucecodepro
+sudo fc-cache -v # Update font cache
+
 # Reload config
 zsh
