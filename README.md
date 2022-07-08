@@ -15,6 +15,7 @@ Some scripts are specific for certain distributions, but usually they work on th
 |---|---|---|
 |[bash-prompt](/bash-prompt.sh)||Installs a custom bash prompt PS1 to `~/.bashrc`|
 |[cli-packages](/cli-packages.sh)|Debian|Installs basic cli packages|
+|[composer](/composer.sh)|Debian|Installs `composer` and required `php` packages|
 |[docker](/docker.sh)|Debian|Installs docker daemon and runs the hello-world demo|
 |[git](/git.sh)||Installs git, sets up git global settings, activates gpg signing and creates a global gitignore (recommended: `generate-gpg`)|
 |[kali-upgrade](/kali-upgrade.sh)|Kali, Kali WSL|Upgrades a minimal or headless Kali installation, alongside with extra packages|
