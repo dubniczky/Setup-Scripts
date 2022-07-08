@@ -34,5 +34,6 @@ Some scripts are specific for certain distributions, but usually they work on th
 |[export-gpg](/export-gpg.sh)|Export a specified gpg key in armored format for migration|
 |[generate-gpg](/generate-gpg.sh)||Generates a gpg key then displays the ID using the given settings|
 |[generate-ssh](/generate-ssh.sh)|Generates an ssh key pair, optionally owerwriting the current one while creating backup|
+|[generate-ssl](/generate-ssl.sh)|Generate SSL/TLS certificate using Openssl|
 |[ubuntu-cleanup](/ubuntu-cleanup.sh)|Removes default installed bloat packages and cleans up the system|
 |[pulseaudio-fix](/pulseaudio-fix.sh)|Fix a common audio issue with PulseAudio configuration where only mute or maximum sound is available|
