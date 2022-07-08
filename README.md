@@ -41,4 +41,5 @@ Some scripts are specific for certain distributions, but usually they work on th
 |[generate-ssh](/generate-ssh.sh)|Generates an ssh key pair, optionally owerwriting the current one while creating backup|
 |[generate-ssl](/generate-ssl.sh)|Generate SSL/TLS certificate using Openssl|
 |[ubuntu-cleanup](/ubuntu-cleanup.sh)|Removes default installed bloat packages and cleans up the system|
+|[update-pms](/update-pms.sh)|Updates all common package manager lists and apps|
 |[pulseaudio-fix](/pulseaudio-fix.sh)|Fix a common audio issue with PulseAudio configuration where only mute or maximum sound is available|
