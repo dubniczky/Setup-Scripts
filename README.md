@@ -31,6 +31,7 @@ Some scripts are specific for certain distributions, but usually they work on th
 
 |Script|Description|
 |---|---|
+|[certbot](/certbot.sh)|Install certificate using certbot|
 |[docker-clean](/docker-clean.sh)|Remove all containers from the system|
 |[export-gpg](/export-gpg.sh)|Export a specified gpg key in armored format for migration|
 |[firewall](/firewall.sh)|Setup and enable firewall rules|
