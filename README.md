@@ -9,6 +9,8 @@ Download the script and the folder with the same name if it exists.
 
 Some scripts are specific for certain distributions, but usually they work on their parent distributions. For example, Debian scripts will work on Ubuntu or Red Hat scripts on Fedora. If a distribution is not specified, it should work on any Linux distro (sometimes it requires settings to be edited).
 
+> WARNING: The package install scripts assume that your package manager has the latest package list update. This is so that in case of subsequent installations it will not fetch those multiple times. Don't forget to update.
+
 ## Install Scripts
 
 |Script|Distribution|Description|
