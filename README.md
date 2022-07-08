@@ -16,7 +16,6 @@ Some scripts are specific for certain distributions, but usually they work on th
 |[bash-prompt](/bash-prompt.sh)||Installs a custom bash prompt PS1 to `~/.bashrc`|
 |[cli-packages](/cli-packages.sh)|Debian|Installs basic cli packages|
 |[docker](/docker.sh)|Debian|Installs docker daemon and runs the hello-world demo|
-|[generate-gpg](/generate-gpg.sh)||Generates a gpg key then displays the ID using the given settings|
 |[git](/git.sh)||Installs git, sets up git global settings, activates gpg signing and creates a global gitignore (recommended: `generate-gpg`)|
 |[kali-upgrade](/kali-upgrade.sh)|Kali, Kali WSL|Upgrades a minimal or headless Kali installation, alongside with extra packages|
 |[mongodb](/mongodb.sh)|Debian|Installs mongodb daemon and and `mongo-cli`, then activates it as a service|
@@ -32,6 +31,7 @@ Some scripts are specific for certain distributions, but usually they work on th
 |Script|Description|
 |---|---|
 |[export-gpg](/export-gpg.sh)|Export a specified gpg key in armored format for migration|
+|[generate-gpg](/generate-gpg.sh)||Generates a gpg key then displays the ID using the given settings|
 |[generate-ssh](/generate-ssh.sh)|Generates an ssh key pair, optionally owerwriting the current one while creating backup|
 |[ubuntu-cleanup](/ubuntu-cleanup.sh)|Removes default installed bloat packages and cleans up the system|
 |[pulseaudio-fix](/pulseaudio-fix.sh)|Fix a common audio issue with PulseAudio configuration where only mute or maximum sound is available|
