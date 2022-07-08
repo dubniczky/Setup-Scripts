@@ -31,6 +31,7 @@ Some scripts are specific for certain distributions, but usually they work on th
 
 |Script|Description|
 |---|---|
+|[docker-clean](/docker-clean.sh)|Remove all containers from the system|
 |[export-gpg](/export-gpg.sh)|Export a specified gpg key in armored format for migration|
 |[generate-gpg](/generate-gpg.sh)||Generates a gpg key then displays the ID using the given settings|
 |[generate-ssh](/generate-ssh.sh)|Generates an ssh key pair, optionally owerwriting the current one while creating backup|
