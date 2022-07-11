@@ -8,6 +8,9 @@
 
 ## Do not exit when command fails
 set +e
+echo "Updating packages..."
+echo "This might take a long time and require a restart afterwards"
+echo "Note that some commands will fail because of missing command. That is intended."
 
 ## Apt
 sudo apt update -y
@@ -42,3 +45,5 @@ sudo npm update -g
 ## Pip
 pip install --upgrade pip
 pip list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 pip install -U
+
+echo "DONE."
