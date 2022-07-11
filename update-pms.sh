@@ -32,6 +32,9 @@ yay -Syu
 ## Zypper
 zypper update
 
+## Flatpak
+flatpak update
+
 ## Npm
 sudo npm install -g npm@latest
 sudo npm update -g
