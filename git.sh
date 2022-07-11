@@ -17,11 +17,11 @@ PACKAGE_INSTALLER="apt install -y"
 sudo $PACKAGE_INSTALLER git
 
 ## Set globals
-git config --global credential.helper store
-git config --global core.autocrlf input # CRLF to LF
-git config --global help.autocorrect true
-git config --global color.ui auto
-git config --global init.defaultbranch main # For compatibility with GitHub and GitLab
+git config --global credential.helper "store"
+git config --global core.autocrlf "input" # CRLF to LF
+git config --global help.autocorrect "true"
+git config --global color.ui "auto"
+git config --global init.defaultbranch "main" # For compatibility with GitHub and GitLab
 git config --global user.name "$GIT_USERNAME"
 git config --global user.email "$GIT_EMAIL"
 git config --global core.editor "$GIT_EDITOR"
@@ -49,4 +49,4 @@ fi
 git lfs install
 
 ## List config
-git config --list
+git config --list | grep --color=never .
