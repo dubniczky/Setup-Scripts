@@ -24,6 +24,7 @@ Some scripts are specific for certain distributions, but usually they work on th
 |[mongodb](/mongodb.sh)|Debian|Installs mongodb daemon and and `mongo-cli`, then activates it as a service|
 |[nodejs](/nodejs.sh)|Debian|Installs `nodejs`, `npm`, `yarn` and commonly used global packages|
 |[python](/python.sh)||Installs `python` and `bpython` runtime and `pip` package manager alongside with common python packages|
+|[redis](/redis.sh)|Debian|Installs `redis-server` and `redis-browser` runtime and activates it as a service|
 |[signal](/signal.sh)|Debian|Installs signal messenger|
 |[vsc](/vsc.sh)||Installs vscodium, adds the custom `config.json` and installs listed packages|
 |[winkex](/winkex.sh)|Kali WSL|Installs winkex and sets up shortcuts for easy usage|
