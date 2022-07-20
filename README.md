@@ -2,6 +2,12 @@
 
 Tools and scripts for setting up development environments and installing packages.
 
+## Support ❤️
+
+If you find the project useful, please consider supporting, or contributing.
+
+[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/dubniczky)
+
 ## Usage
 
 Each script is a standalone installer.  
