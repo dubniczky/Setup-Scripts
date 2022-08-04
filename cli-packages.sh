@@ -4,18 +4,26 @@
 ## Repository: https://gitlab.com/richardnagy/system-setup-scripts
 ## Installs basic packages for debian systems
 
+PKG="apt"
+
 # OS version
 lsb_release -dc
 
 # Update pm/os
-sudo apt -y update
-sudo apt -y upgrade
+sudo $PKG update
+sudo $PKG -y upgrade
 
-# Install utilities
-sudo apt install -y \
+# Install cli utilities
+sudo $PKG install -qy \
     unzip \
     curl \
     wget \
-    gnome-tweak-tool \
     make \
-    gnupg2
+    gnupg2 \
+    ca-certificates \
+    exa \
+    g++ \
+    git \
+    git-lfs \
+    mc \
+    nano
