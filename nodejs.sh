@@ -2,29 +2,30 @@
 
 ## Author: Richard Antal Nagy
 ## Repository: https://gitlab.com/richardnagy/system-setup-scripts
-## Installs NodeJS, NVM, package managers, and several general packages
+## Installs NodeJS, package managers, and several general packages
 
-## Settings
-NVM_VERSION="v0.39.1" # Check for newest before running (https://github.com/nvm-sh/nvm#installing-and-updating)
+NODE_VERSION="18.9.0"
 
-## Install packages
-sudo apt install -y nodejs npm
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/$NVM_VERSION/install.sh | bash
+## Install PNPM
+curl -fsSL https://get.pnpm.io/install.sh | sh -
+export PNPM_HOME="$HOME/.local/share/pnpm"
+export PATH="$PATH:$PNPM_HOME"
 
-## Check versions
-node -v
-npm -v
+## Install NPM
+curl -qL https://www.npmjs.com/install.sh | sh
 
-## Install yarn for faster package installation
-npm i -g yarn
+## Install nodejs
+pnpm env use --global ${NODE_VERSION}
 
-## Install global packages
-npx yarn global add \
+## Install node packages
+pnpm install -g \
+    yarn \
     nodemon \
     http-server \
-    eslint \
-    uglifyjs \
-    webpack
+    eslint
 
-## List all global packages
-npm ls -g --depth=0
+## Check installed packages
+npm -v
+yarn -v
+pnpm -v
+node -v
