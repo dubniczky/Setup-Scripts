@@ -32,8 +32,9 @@ alias sdnf="sudo dnf -y" # Red Hat
 alias sapt="sudo apt -y" # Debian
 alias spacman="sudo pacman --noconfirm" # Arch
 alias sdocker="sudo docker"
+alias trash="rm -rf"
 
-## Python 
+## Python
 alias py="python3"
 alias python="python3"
 alias pym="python manage.py" # For Django projects
