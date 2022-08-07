@@ -32,6 +32,8 @@ if [ $GIT_SIGNINGKEY ]; then
     git config --global user.signingkey $GIT_SIGNINGKEY
     git config --global commit.gpgsign true
     git config --global gpg.program $(which gpg)
+    echo "If commit fails with gpg failed to sign the data, try this command: export GPG_TTY=\$(tty)"
+    echo "If this solution worked, add this command to your .bashrc or .zshrc file"
 fi
 
 ## Create global gitignore
