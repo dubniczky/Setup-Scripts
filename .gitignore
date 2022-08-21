@@ -1,3 +1,4 @@
 .vscode/
 
 *.rdb
+.DS_Store
