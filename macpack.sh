@@ -73,6 +73,12 @@ desktop_apps=(
     1password
     bitwarden
     viscosity
+    autopsy
+    dirb
+    gobuster
+    netcat
+    metasploit
+    john
 )
 brew install --display-times --cask "${desktop_apps[@]}"
 echo "Installed ${#desktop_apps[@]} desktop applications."
