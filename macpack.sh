@@ -26,7 +26,6 @@ cli_apps=(
     zstd
 )
 brew install "${cli_apps[@]}"
-echo "Installed ${#cli_apps[@]} cli applications."
 
 # CLI apps
 desktop_apps=(
@@ -75,4 +74,6 @@ desktop_apps=(
     john
 )
 brew install --display-times "${desktop_apps[@]}"
+
+echo "Installed ${#cli_apps[@]} cli applications."
 echo "Installed ${#desktop_apps[@]} desktop applications."
