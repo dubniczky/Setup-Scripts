@@ -25,7 +25,7 @@ cli_apps=(
     sqlite
     zstd
 )
-brew install --display-times "${cli_apps[@]}"
+brew install "${cli_apps[@]}"
 echo "Installed ${#cli_apps[@]} cli applications."
 
 # CLI apps
@@ -42,11 +42,7 @@ desktop_apps=(
     fig
 
     # Dev
-    firefox-developer-edition
     visual-studio-code
-    git
-    git-lfs
-    g++
 
     # Web
     google-chrome
@@ -74,11 +70,9 @@ desktop_apps=(
     bitwarden
     viscosity
     autopsy
-    dirb
     gobuster
     netcat
-    metasploit
     john
 )
-brew install --display-times --cask "${desktop_apps[@]}"
+brew install --display-times "${desktop_apps[@]}"
 echo "Installed ${#desktop_apps[@]} desktop applications."
