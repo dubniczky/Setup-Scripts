@@ -52,7 +52,7 @@ if [ $CUSTOM_PROMPT ]; then
             delta_time=$(echo "scale=2; $now - $command_timer_start" | bc)
             if [ ${#delta_time} -eq 3 ]; then
                 delta_time="0$delta_time"
-            fi 
+            fi
             export RPROMPT="%F{cyan}${delta_time}s%f [$(exitcode_prompt)]"
             unset command_timer_start
         fi
@@ -68,3 +68,36 @@ if [ $CUSTOM_PROMPT ]; then
     PROMPT='[ $(user_prompt) | $(directory_prompt) | $(git_prompt) | $(time_prompt) ]
 $(elevation_prompt) '
 fi
+
+# Shortcut utility
+function sc() {
+    # Shortcut file
+    sc_file=$HOME/.sc
+    def_location=default
+
+    # Display help message
+    if [ "$1" = "-h" ] || [ "$1" = "--help" ]; then
+        echo "Usage: sc [shortcut]"
+        echo "Jump to a shortcut specified in: $sc_file"
+    fi
+
+    # Check if shortcut file exists
+    if [ ! -f $sc_file ]; then
+        echo "Shortcut file not found: $sc_file"
+        return 1
+    fi
+
+    # Check if shortcut is specified -> execute default option
+    if [ -z $1 ]; then
+        cd $(grep "^$def_location:" $sc_file | cut -d':' -f2)
+    fi
+
+    # Check if shortcut exists
+    if ! grep -q "^$1:" $sc_file; then
+        echo "Shortcut not found: $1"
+        return 1
+    fi
+
+    # Jump to shortcut
+    cd $(grep "^$1:" $sc_file | cut -d':' -f2)
+}
